@@ -1,4 +1,4 @@
-# load libraries
+# load libraries5
 library(shiny)
 
 # Define the overall UI
@@ -8,8 +8,9 @@ shinyUI(
   fluidPage(    
     
     # Give the page a title
-    titlePanel("Random generation for the normal distribution"),
-    h4("This example highlights the capabilities of Histograms and Density Plots, by repeatedly taking the mean of a set of random normals and plotting the results."),
+    titlePanel("Central limit theorem"),
+    h4("This is an educational data product used to illustrate the Central limit theorem, by repeatedly taking the mean of a set of random normals and plotting the results."),
+    h4("As well this application highlights the capabilities of Histograms and Density Plots"),
    
     # Generate a row with a sidebar
     sidebarLayout(      
@@ -19,7 +20,7 @@ shinyUI(
         hr(),
         selectInput("n_size", "Set size:", 
                     choices = c(10, 20, 30, 40),
-                    selected = 20),
+                    selected = 40),
         sliderInput("n_simulations", 
                     "Number of observations:", 
                     value = 500,
@@ -28,7 +29,7 @@ shinyUI(
         br(),
         selectInput("n_breaks", "Size of bins:", 
                     choices = c(20, 40, 60),
-                    selected = 40)
+                    selected = 60)
       ),
 
       # Create a spot for the histogram 
