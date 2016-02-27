@@ -3,41 +3,43 @@ Course Project: Shiny Application and Reproducible Pitch
 author: dguedo
 date: Feb 27th, 2016
 
-Educational data product
+An educational data product
 ========================================================
+<small>
+I developed an educational data product used to illustrate the Central limit theorem, by repeatedly taking the mean from a set of independent and identically distributed random variables and plotting the results. This application was developed for the Developing Data Products course.
 
-This is an educational data product used to illustrate the Central limit theorem, by repeatedly taking the mean of a set of random normals and plotting the results.  This application was developed 
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
+Users of the application can manipulate the application three different ways by;
+- Controlling the size of IID sets
+- Increasing or decreasing the number of sample mean observations
+- Changing the size of bins for the histogram
+</small>
 
 How it works
 ========================================================
+<small>
+This applications was designed using [Shiny](http://shiny.rstudio.com/), and bulit in R. As you manipulate the number of observations the histogram of sample means fluctuates, converging on a normal distribution as the number observations increase.
 
+This is achieved by first finding the mean for a set of IID random variables, then repeating this process a number of times.  The code below executes this algorithm, with inputs from the user. 
+</small>
 
 ```r
-summary(cars)
-```
-
-```
-     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  
+# server.R
+means <- data.frame(
+  x=sapply(1:input$n_simulations,
+           function(x) 
+             {mean(rnorm(input$n_size))}))  
 ```
 
 Histogram output
 ========================================================
-
+<small>
+The code on the previous slide, when plotted, would look similar to the histogram below.
+</small>
 ![plot of chunk unnamed-chunk-2](presentation-figure/unnamed-chunk-2-1.png)
 
 Central limit theorem application
 ========================================================
-- The application is hosted here: https://dguedo.shinyapps.io/Shiny_Application/
+- You can find the application here: https://dguedo.shinyapps.io/Shiny_Application/
 - The code can be found on github here: https://github.com/dguedo/Shiny_Application
 
 ![Central limit theorem illustrated](images/app.png)

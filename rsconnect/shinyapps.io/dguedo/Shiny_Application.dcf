@@ -1,8 +1,8 @@
 name: Shiny_Application
 account: dguedo
 server: shinyapps.io
-bundleId: 382016
+bundleId: 382116
 url: https://dguedo.shinyapps.io/Shiny_Application/
-when: 1456594732.94798
+when: 1456604258.52145
 asMultiple: FALSE
 asStatic: FALSE

@@ -9,7 +9,7 @@ shinyUI(
     
     # Give the page a title
     titlePanel("Central limit theorem"),
-    h4("This is an educational data product used to illustrate the Central limit theorem, by repeatedly taking the mean of a set of random normals and plotting the results."),
+    h4("This is an educational data product used to illustrate the Central limit theorem, by repeatedly taking the mean from a set of independent and identically distributed random variables and plotting the results."),
     h4("As well this application highlights the capabilities of Histograms and Density Plots"),
    
     # Generate a row with a sidebar
@@ -34,7 +34,7 @@ shinyUI(
 
       # Create a spot for the histogram 
       mainPanel(
-        plotOutput("samplePlot", height = "600px")  
+        plotOutput("samplePlot", height = "500px")  
       )
       
     )
