@@ -35,7 +35,7 @@ Histogram output
 <small>
 The code on the previous slide, when plotted, would look similar to the histogram below.
 </small>
-![plot of chunk unnamed-chunk-2](presentation-figure/unnamed-chunk-2-1.png)
+![plot of chunk unnamed-chunk-2](presentation-figure/unnamed-chunk-2-1.png) 
 
 Central limit theorem application
 ========================================================
